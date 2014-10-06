@@ -1,0 +1,22 @@
+package org.info.creep;
+
+import java.util.Scanner;
+
+public class time {
+	public static void main (String [] args){
+		Scanner reader = new Scanner(System.in);
+			double minutes;
+			double hours;
+			double days;
+			double year;
+			
+			System.out.print(" ");
+			minutes= 1;
+			hours = minutes*60;
+			days = hours*24;
+			year = days*365;
+			
+			System.out.print("Minutes in a typical year: ");
+			System.out.println(year);
+	}
+}
