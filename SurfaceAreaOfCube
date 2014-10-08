@@ -1,0 +1,21 @@
+package org.CH3.stuff;
+
+import java.util.Scanner;
+
+public class SurfaceAreaOfCube {
+	public static void main (String[]args){	
+		Scanner reader = new Scanner(System.in);
+		
+		int lengthOfEdge;
+		double surfaceArea;
+
+		
+		System.out.print("Enter length of an edge: ");
+		lengthOfEdge = (int) reader.nextDouble();
+		
+		surfaceArea = 6 * (lengthOfEdge * lengthOfEdge);
+		
+		
+		System.out.println("Your surface area is: " + surfaceArea);
+	}}	
+
