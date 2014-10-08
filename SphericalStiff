@@ -1,0 +1,30 @@
+package org.CH3.stuff;
+
+import java.util.Scanner;
+
+public class SpehericalStuff {
+	public static void main (String[]args){	
+		final double PI = 3.14;
+		Scanner reader = new Scanner(System.in);
+		
+		double diameter;
+		double radius;
+		double circumference;
+		double surfaceArea;
+		double volume;
+		
+		
+		System.out.print("Enter length of the radius: ");
+		radius = reader.nextDouble();
+		
+		surfaceArea = PI * (radius * radius);
+		diameter = radius + radius;
+		circumference = (2 * PI) * radius;
+		volume = (4 * PI * (radius * radius * radius))/3;
+		
+		System.out.println("Your surface area is: " + surfaceArea);
+		System.out.println("Your diameter is: " + diameter);
+		System.out.println("Your circumference is: " + circumference);
+		System.out.println("Your volume is: " + volume);
+	}
+}
