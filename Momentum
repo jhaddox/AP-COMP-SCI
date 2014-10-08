@@ -1,0 +1,22 @@
+package org.info.creep;
+
+import java.util.Scanner;
+
+public class Momentum {
+	public static void main (String[] args){
+		Scanner reader = new Scanner(System.in);
+			double momentum;
+			double velocity;
+			double mass;
+			
+			System.out.print("Enter Mass: ");
+			mass = reader.nextDouble();
+			System.out.print("Enter Velocity: ");
+			velocity = reader.nextDouble();
+			momentum = mass*velocity;
+			System.out.print("The Momentum is: ");
+			System.out.println(momentum);	
+			
+	}
+
+}

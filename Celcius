@@ -1,0 +1,19 @@
+package org.celcius.prog;
+
+import java.util.Scanner;
+public class Celcius {
+	public static void main (String [] args){
+		Scanner reader = new Scanner(System.in);
+			double fahrenheit;
+			double celcius;	
+		
+		System.out.print("Enter degrees Fahrenheit: ");
+		fahrenheit = reader.nextDouble();
+		
+		celcius = (fahrenheit - 32.0)*5.0/9.0;
+		
+		System.out.print("The equivalent in Celcius is ");
+		System.out.println(celcius);
+	}
+
+}
