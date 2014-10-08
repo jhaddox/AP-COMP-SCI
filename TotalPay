@@ -1,0 +1,32 @@
+package org.CH3.stuff;
+
+import java.util.Scanner;
+
+public class TotalPay {
+	//Insert Total Recall reference here -->;
+	public static void main (String[]args){	
+		Scanner reader = new Scanner(System.in);
+		
+		double hourlyWage;
+		double regHours;
+		double overtimeHours;
+		double normalPay;
+		double otPay;
+		double totalPay;
+		
+		
+		System.out.print("Enter hourly wage: ");
+		hourlyWage = (int) reader.nextDouble();
+		System.out.print("Enter normal hours: ");
+		regHours = (int) reader.nextDouble();
+		System.out.print("Enter overtime hours: ");
+		overtimeHours = (int) reader.nextDouble();
+		
+		normalPay = hourlyWage * regHours;
+		otPay = (hourlyWage * 1.5) * overtimeHours;
+		totalPay = normalPay + otPay;
+		
+		System.out.println("Your total pay is: " + totalPay);
+	}
+
+}
