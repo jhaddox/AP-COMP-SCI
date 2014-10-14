@@ -1,0 +1,79 @@
+package org.CH3.stuff;
+
+import java.util.Scanner;
+
+public class TotalPayRedux {
+	//Insert Total Recall reference here -->
+		public static void main (String[]args){	
+			@SuppressWarnings("resource")
+			Scanner reader = new Scanner(System.in);
+			
+			double hourlyWage;
+			double regHours1;
+			double overtimeHours1;
+			double regHours2;
+			double overtimeHours2;
+			double regHours3;
+			double overtimeHours3;
+			double regHours4;
+			double overtimeHours4;
+			double regHours5;
+			double overtimeHours5;
+			double normalPay1;
+			double otPay1;
+			double normalPay2;
+			double otPay2;
+			double normalPay3;
+			double otPay3;
+			double normalPay4;
+			double otPay4;
+			double normalPay5;
+			double otPay5;
+			double totalPay;
+			double normalPay;
+			double otPay;
+			
+			
+			System.out.print("Enter hourly wage: ");
+			hourlyWage = (int) reader.nextDouble();
+			System.out.print("Enter normal hours on workday 1: ");
+			regHours1 = (int) reader.nextDouble();
+			System.out.print("Enter overtime hours on workday 1: ");
+			overtimeHours1 = (int) reader.nextDouble();
+			System.out.print("Enter normal hours on workday 2: ");
+			regHours2 = (int) reader.nextDouble();
+			System.out.print("Enter overtime hours on workday 2: ");
+			overtimeHours2 = (int) reader.nextDouble();
+			System.out.print("Enter normal hours on workday 3: ");
+			regHours3 = (int) reader.nextDouble();
+			System.out.print("Enter overtime hours on workday 3: ");
+			overtimeHours3 = (int) reader.nextDouble();
+			System.out.print("Enter normal hours on workday 4: ");
+			regHours4 = (int) reader.nextDouble();
+			System.out.print("Enter overtime hours on workday 4: ");
+			overtimeHours4 = (int) reader.nextDouble();
+			System.out.print("Enter normal hours on workday 5: ");
+			regHours5 = (int) reader.nextDouble();
+			System.out.print("Enter overtime hours on workday 5: ");
+			overtimeHours5 = (int) reader.nextDouble();
+			
+			normalPay1 = hourlyWage * regHours1;
+			normalPay2 = hourlyWage * regHours2;
+			normalPay3 = hourlyWage * regHours3;
+			normalPay4 = hourlyWage * regHours4;
+			normalPay5 = hourlyWage * regHours5;
+			normalPay = normalPay1 + normalPay2 + normalPay3 + normalPay4 + normalPay5;
+			
+			otPay1 = (hourlyWage * 1.5) * overtimeHours1;
+			otPay2 = (hourlyWage * 1.5) * overtimeHours2;
+			otPay3 = (hourlyWage * 1.5) * overtimeHours3;
+			otPay4 = (hourlyWage * 1.5) * overtimeHours4;
+			otPay5 = (hourlyWage * 1.5) * overtimeHours5;
+			otPay = otPay1 + otPay2 + otPay3 + otPay4 + otPay5;
+			
+			totalPay = normalPay + otPay;
+			
+			System.out.println("Your total pay is: " + totalPay);
+		}
+
+}

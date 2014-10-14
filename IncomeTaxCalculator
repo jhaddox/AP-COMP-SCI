@@ -1,0 +1,31 @@
+package org.CH3.stuff;
+
+import java.util.Scanner;
+
+public class IncomeTax {
+	public static void main (String[]args){
+		final double TAX_RATE = .20;
+		final double STANDARD_DEDUCTION = 10000.0;
+		final double DEPENDENT_DEDUCTION = 2000.0;
+		
+		Scanner reader = new Scanner(System.in);
+		
+		double grossIncome;
+		int numDependents;
+		double taxableIncome;
+		double incomeTax;
+		double lostCash;
+		
+		System.out.print("Enter the gross income: ");
+		grossIncome = reader.nextDouble();
+		System.out.print("Enter the number of dependents: ");
+		numDependents = reader.nextInt();
+		
+		taxableIncome= grossIncome - STANDARD_DEDUCTION - DEPENDENT_DEDUCTION * numDependents;
+		incomeTax = taxableIncome * TAX_RATE;
+		lostCash = grossIncome + incomeTax;
+		
+		System.out.println("The income tax is $" + incomeTax);
+		
+	}
+}
