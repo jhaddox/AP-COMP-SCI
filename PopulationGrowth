@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class PopulationGrowth {
+	public static <If> void main (String [] args){
+		@SuppressWarnings("resource")
+		Scanner reader = new Scanner(System.in);
+			//input
+			double initialcreaturecount;
+			double rateofgrowth;
+			double hours;
+			//output
+			double totalpop;
+			//Stored Values
+			double growthrate;
+			double timestored;
+		
+			System.out.print("Enter Initial Population of Creatures: ");
+			initialcreaturecount = reader.nextDouble();
+			System.out.print("Enter Rate of Growth: ");
+			rateofgrowth = reader.nextDouble();
+			System.out.print("Number of Hours: ");
+			hours = reader.nextDouble();
+			
+			growthrate = hours / 6;
+			timestored = growthrate * rateofgrowth;
+			totalpop = initialcreaturecount * timestored;
+		
+		System.out.print(totalpop);			
+			}
+}

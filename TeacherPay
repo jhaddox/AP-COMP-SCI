@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class TeacherPay {
+	@SuppressWarnings("unused")
+	public static <If> void main (String [] args){
+		@SuppressWarnings("resource")
+		Scanner reader = new Scanner(System.in);
+			//input
+			double stsalary;
+			double centincrease;
+			double yearn;
+			//output
+			double finsalary;
+			//Stored Values
+			double growth;
+			double percent;
+			double midsalary;
+		
+			System.out.print("Enter Starting Salary: ");
+			stsalary = reader.nextDouble();
+			System.out.print("Enter Percent Increase: ");
+			centincrease = reader.nextDouble();
+			System.out.print("Number of Years: ");
+			yearn = reader.nextDouble();
+			
+			int sts,cni,years = 0,increment,startingValue, endingValue;
+			startingValue=1;
+			endingValue=10;
+			years = years + 1;
+			percent = centincrease / 100;
+			midsalary = (stsalary*percent)+stsalary;
+			if (yearn <= 10){
+				while (years <=10){
+					if (years == 1){					
+						 System.out.println("Year: "+years);
+						 System.out.println("Your Salary: "+stsalary);
+				         System.out.print("\n");
+				         years = years + 1;
+					}else if (years == 2){
+						finsalary = midsalary;
+						 System.out.println("Year: "+years);
+						 System.out.println("Your Salary: "+finsalary);
+				         System.out.print("\n");
+				         finsalary = stsalary;
+				         years = years + 1;
+				         
+					}else while (years <=10){
+						finsalary = midsalary + (stsalary*percent);
+						 System.out.println("Year: "+years);
+						 System.out.println("Your Salary: "+finsalary);
+				         System.out.print("\n");
+				         midsalary = finsalary;
+				         years = years + 1;
+					}
+					
+				}
+			}
+			
+			
+			
+			}
+}

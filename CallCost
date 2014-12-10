@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class CallCost {
+	public static <If> void main (String [] args){
+		@SuppressWarnings("resource")
+		Scanner reader = new Scanner(System.in);
+			final double TWOMINUTE_CALL_COST = 1.15;
+			final double ADDITIONAL_MINUTE= .5;
+			double minutes;
+			double total;
+			double xtramin;
+		
+			System.out.print("Enter Time on Call: ");
+			minutes = reader.nextDouble();
+		
+		xtramin = Math.abs(2 - minutes);
+		
+		total = TWOMINUTE_CALL_COST + (ADDITIONAL_MINUTE * xtramin);
+		
+		if (minutes == 2){
+			System.out.print("Total Payment:" + TWOMINUTE_CALL_COST);
+			}else{
+				System.out.print("Total Payment:" + total);			}
+			}
+}
