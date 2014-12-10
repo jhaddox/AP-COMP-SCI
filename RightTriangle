@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class RightTriangle {
+	public static <If> void main (String [] args){
+		@SuppressWarnings("resource")
+		Scanner reader = new Scanner(System.in);
+			double done;
+			double dtwo;
+			double dthree;
+			double pythag;
+			
+		
+		System.out.print("Enter length of side 1: ");
+		done = reader.nextDouble();
+		System.out.print("Enter length of side 2: ");
+		dtwo = reader.nextDouble();
+		System.out.print("Enter length of side 3: ");
+		dthree = reader.nextDouble();
+		
+		pythag = (done*done) + (dtwo*dtwo);
+		
+		if (dthree == pythag){
+			System.out.print("Is a right Triangle");
+			}else{
+				System.err.println("Isn't a right triangle");
+				}
+			}
+}
