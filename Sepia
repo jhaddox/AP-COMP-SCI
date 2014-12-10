@@ -1,0 +1,52 @@
+import images.APImage;
+import images.Pixel;
+
+import java.util.Scanner;
+
+public class Sepia {
+	public static void main(String[]args){
+		Scanner reader = new Scanner(System.in);
+		System.out.print("Enter an image file name: ");
+		String fileName = reader.nextLine();
+		APImage image = new APImage(fileName);
+		image.draw();	   
+		
+		for(Pixel p : image){
+			int red = p.getRed();
+			int green = p.getGreen();
+			int blue = p.getBlue();
+			
+			double dred=  (int) (red * 0.299);
+			double dgreen=  (int) (green * 0.587);
+			double dblue= (int) (blue* 0.114);
+			
+			double result = (dred + dgreen + dblue);
+				p.setRed((int) result);
+				p.setGreen((int) result);			
+				p.setBlue((int) result);
+				
+			int red2 = p.getRed();
+			int blue2 = p.getBlue();
+			
+			int red3;
+			int blue3;
+			
+			if (red2 < 63){
+				red3 = (int)(red2*1.1);
+				blue3 = (int)(blue2*.9);
+			}else if(red2<192){
+				red3 = (int)(red2*1.15);
+				blue3 = (int) (blue2 *.85);
+			}else{
+				red3 = Math.min((int)(red2*1.08), 255);
+				blue3 = (int)(blue2 * 0.93);
+			}
+			p.setRed((int) red3);		
+			p.setBlue((int) blue3);
+		}
+			System.out.print("Press enter to continue: ");
+			reader.nextLine();
+			image.draw();
+			reader.close();
+		}		
+	}
