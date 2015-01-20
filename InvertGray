@@ -1,0 +1,28 @@
+import images.APImage;
+import images.Pixel;
+import java.util.Scanner;
+
+public class InvertGray {
+	public static void main(String[]args){
+		Scanner stringReader = new Scanner(System.in);
+		System.out.print("Enter an image file name: ");
+		String fileName = stringReader.nextLine();
+		APImage image = new APImage(fileName);
+		image.draw();   
+	    
+		for(Pixel p : image){
+			int red = p.getRed();
+			int green = p.getGreen();
+			int blue = p.getBlue();
+				p.setRed(255-red);
+				p.setBlue(255-blue);
+				p.setGreen(255-green);
+		
+		}
+		System.out.print("Press enter to continue: ");
+		stringReader.nextLine();
+		image.draw();
+		stringReader.close();
+	}
+
+}

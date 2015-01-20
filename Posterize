@@ -1,0 +1,38 @@
+import images.APImage;
+import images.Pixel;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Posterize {
+	public static void main(String[]args){
+		Scanner stringReader = new Scanner(System.in);
+		System.out.print("Enter an image file name: ");
+		String fileName = stringReader.nextLine();
+		APImage image = new APImage(fileName);
+		image.draw();
+		Random randomGenerator = new Random();
+	    for (int idx = 1; idx <= 2; ++idx){
+	      int randRed = randomGenerator.nextInt();
+	      int randGreen = randomGenerator.nextInt();
+	    
+		for(Pixel p : image){
+			int red = p.getRed();
+			int green = p.getGreen();
+			int blue = p.getBlue();
+		    int average = (red + green + blue) / 3;
+			if (average< 128){
+				p.setRed(randRed);
+				p.setBlue(0);
+				p.setGreen(randGreen);
+			}else{
+				p.setRed(255);
+				p.setBlue(255);
+				p.setGreen(255);
+			}
+		}
+		System.out.print("Press enter to continue: ");
+		stringReader.nextLine();
+		image.draw();
+		stringReader.close();
+	}}}

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+import sounds.APSoundClip;
+import sounds.*;
+
+public class Splicer {
+	public static void main (String[]args){
+		Scanner stringReader1 = new Scanner(System.in);
+		System.out.print("Enter an image file name: ");
+		String fileName1 = stringReader1.nextLine();
+		APSoundClip clip1 = new APSoundClip(fileName1);
+		Scanner stringReader2 = new Scanner(System.in);
+		System.out.print("Enter another image file name: ");
+		String fileName2 = stringReader2.nextLine();
+		APSoundClip clip2 = new APSoundClip(fileName2);		
+	}
+}
+	
